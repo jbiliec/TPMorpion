@@ -1,7 +1,9 @@
 package fr.imie.morpion.view;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Graphics;
 import java.awt.GridLayout;
 
 import javax.swing.JFrame;
@@ -49,7 +51,14 @@ public class View {
 		mainPanel.add(scorePanel,BorderLayout.EAST);
 		
 		frame.setContentPane(mainPanel);
+		Graphics headerCell = null;
+		this.PaintHeader(headerCell);
 		
+	}
+	
+	public void PaintHeader(Graphics g){
+		g.setColor(Color.black);
+		g.drawRect(0, 50, 900, 50);
 	}
 
 }
