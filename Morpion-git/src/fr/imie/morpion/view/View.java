@@ -30,15 +30,25 @@ public class View {
 		JTextField txtNameB = new JTextField();
 		JLabel lblNameA = new JLabel("Joueur A:");
 		JLabel lblNameB = new JLabel("Joueur B:");
+		JLabel lblSpace = new JLabel("         ");
 		
-		headPanel.setLayout(new GridLayout(1,4));
+		headPanel.setLayout(new GridLayout(1,5));
 		gridPanel.setLayout(new GridLayout(3,3));
 		mainPanel.setLayout(new BorderLayout());
+		scorePanel.setLayout(new GridLayout(2,10));
 		
 		headPanel.add(lblNameA);
 		headPanel.add(txtNameA);
+		headPanel.add(lblSpace);
 		headPanel.add(lblNameB);
 		headPanel.add(txtNameB);
+		
+		
+		mainPanel.add(headPanel,BorderLayout.NORTH);
+		mainPanel.add(gridPanel,BorderLayout.CENTER);
+		mainPanel.add(scorePanel,BorderLayout.EAST);
+		
+		frame.setContentPane(mainPanel);
 		
 	}
 
